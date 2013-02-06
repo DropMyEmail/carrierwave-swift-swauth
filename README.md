@@ -23,9 +23,8 @@ export SWIFT_CONTAINER="container-name"
 Set the storage to be __swift_swauth__. The usual Paperclip configuration should be applicable.
 
 ``` ruby
-class User < ActiveRecord::Base
-  has_attached_file :avatar,
-    :storage => :swift_swauth
+class AvatarUploader < CarrierWave::Uploader::Base
+  :storage => :swift_swauth
 end
 ```
 
